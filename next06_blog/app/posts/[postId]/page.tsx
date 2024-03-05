@@ -4,9 +4,18 @@ import { notFound } from 'next/navigation'
 import getFormattedDate from '@/lib/getFormattedDate'
 import Link from 'next/link'
 
+// to make this dinamic page into static.
+export function generateStaticParams() {
+  const posts = getSortedPostsData();
+  return posts.map(post => {
+    postId: post.id
+  })
+}
+
+
 export   function generateMetadata({ params }: { params: { postId: string } }) {
     
-    const posts = getSortedPostsData()
+    const posts = getSortedPostsData() //deduped.
     const { postId } = params
     const post = posts.find(post => post.id === postId)
 
