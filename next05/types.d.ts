@@ -2,7 +2,7 @@ type Result = {
     pageid: string,
     title: string,
     extract: string,
-    //? - means optional
+    // ? - means optional
     thumbnail?: {
         source: string,
         width: number,
