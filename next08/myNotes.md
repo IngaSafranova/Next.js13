@@ -12,3 +12,6 @@ will apply middleware only in any file in api directory.
 Rate limiter provides restrictions for api. E.g. 150 request per hour or 1 message allowed to be sent in 250ms.
 If we want to create different limits for different routes we need to create separate files for them.
 If we use the same rate limiter file for different routes they all share the same limit. 
+
+**CORS**
+In Nextjs API Routes do not specify CORS headers, meaning they are same-origin only by default. If we want others to access them we need use CORS origin handlers.
