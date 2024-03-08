@@ -6,6 +6,8 @@ export default function Navbar() {
       <div className="max-w-xl mx-auto sm:px-4 flex justify-between">
         <h1 className="text-3xl font-bold mb-0">
           <Link
+            // for new todo be shown on home page. Otherwise its not updating on home page as it is prefetched.
+            // prefetch={false}
             href="/"
             className="text-white/90 no-underline hover:text-white"
           >
@@ -14,6 +16,7 @@ export default function Navbar() {
         </h1>
 
         <Link
+         
           href="/add"
           className="text-2xl text-white/90 no-underline hover:text-white"
         >
